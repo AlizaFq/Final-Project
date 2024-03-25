@@ -1,6 +1,10 @@
 //adapted from Mappa tutorial
 //for more, see: https://mappa.js.org/docs/simple-map.html
 
+function preload() {
+    dataset = loadTable("deathsbyarea.csv", "header");
+  }
+
 // Options for map
 const options = {
     lat: 51.425222,  //initial latitude
