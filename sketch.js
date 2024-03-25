@@ -27,7 +27,7 @@ let minMag;
 let maxMag;
 
 function preload() {
-  dataset = loadTable("earthquakes1970-2014.csv", "header");
+  dataset = loadTable("MSOAs 2011-2.csv", "header");
 }
 
 function setup() {
