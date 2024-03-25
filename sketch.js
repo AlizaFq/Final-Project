@@ -41,5 +41,5 @@ const options = {
     fill(0);
     ellipse(pos.x, pos.y, 5, 5); //draw an ellipse at the desired coordinate
     textSize(20);
-    text('Royal Holloway!', pos.x, pos.y-5) //a label with slight y-offset 
+    text('', pos.x, pos.y-5) //a label with slight y-offset 
   }
