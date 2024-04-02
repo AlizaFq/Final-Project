@@ -27,7 +27,7 @@ let minMag;
 let maxMag;
 
 function preload() {
-  dataset = loadTable("MSOAs 2011-2.csv", "header");
+  dataset = loadTable("data graph.csv", "header");
 }
 
 function setup() {
