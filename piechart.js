@@ -26,11 +26,11 @@ function setup() {
     let value = dataset.getNum(row, 1);
     print(value);
     //add up all the values so we can find out the total
-    total += value;
+  total += value;
   }
 
   //here we can update the 'scaling' variable so we can scale everything in proportion
-  scaling = 100 / total;
+ scaling = 100 / total;
 }
 
 function piechart(x, y, w, h) {
@@ -38,7 +38,7 @@ function piechart(x, y, w, h) {
 
 
   //loop through each row in the dataset
-  for (let row = 0; row < dataset.getRowCount(); row++) {
+ for (let row = 0; row < dataset.getRowCount(); row++) {
     //calculate the angle for this sector
     
     /*multiple by scaling to get current value as a percentage (100), 
@@ -53,7 +53,7 @@ function piechart(x, y, w, h) {
     //move to correct position
     translate(x, y);
     //rotate to the current starting angle
-    rotate(currentAngle);
+   rotate(currentAngle);
     //set colours
     fill(0, 94, 184);
     stroke(241, 5, 95);
@@ -65,7 +65,7 @@ function piechart(x, y, w, h) {
     noStroke();
     rotate(sectorAngle / 2);
     text(dataset.getString(row, 0), w / 2 + 10, 0);
-    pop();
+   pop();
     
     //update the currentAngle for the next sector
     currentAngle += sectorAngle;
@@ -81,3 +81,6 @@ function draw() {
 
   piechart(width/2, height/2, 300, 300);
 }
+
+
+
