@@ -12,7 +12,7 @@ function setup() {
   let cnv = createCanvas(500, 500); //width in pixels, height in pixels
   noStroke();
   colorMode(RGB);
-  canvas.parent('canvasForHTML');
+  //canvas.parent('canvasForHTML');
   //cnv.position(400, 300, 'fixed');
 
   //NOTE!! pie charts represent values as a fraction of a total
