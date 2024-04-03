@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <title>Infectious Disease; Covid-related Deaths in the UK</title>
 <meta charset="UTF-8">
@@ -11,19 +12,13 @@
  <script src="https://cdn.jsdelivr.net/npm/p5"></script>
  <!--LOAD THE mappa.js EXTENSION-->
  <script src="./mappa.js" type="text/javascript"></script>
-
+ <!--LOAD each visualisation-->
  <script src="sketch.js"></script>
  <script src="linegraph.js"></script>
  <script src="piechart.js"></script>
  <script src="barchart.js"></script>
-
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-</style>
 </head>
+
 <body>
 <!--IMPORTANT: THE BELOW <SCRIPT> TAG LINKS OUR CODE FILE INTO OUR PROJECT'S WEBPAGE.-->
   <script src="sketch.js"></script>
@@ -31,9 +26,9 @@ body {font-size:16px;}
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>All<br>Visualisations</b></h3>
-  </div>
+
+  <div class="w3-container"> <h3 class="w3-padding-64"><b>All<br>Visualisations</b></h3> </div>
+
   <div class="w3-bar-block">
     <a href="#map" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Interactive map - Overall deaths by area</a> 
     <a href="#linegraph" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Line graph - Quantity of deaths directly resulted from Covid-19</a> 
@@ -42,13 +37,10 @@ body {font-size:16px;}
   </div>
 </nav>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
+<!-- FORMAT main text alignment -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-  <!-- Header -->
+  <!-- Headers -->
   <div class="w3-container" style="margin-top:80px" id="map">
     <h1 class="w3-jumbo"><b>Covid-related Deaths in the UK</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>At the height of the pandemic (March - December 2020)</b></h1>
@@ -58,22 +50,23 @@ body {font-size:16px;}
   <!-- Photo grid (modal) -->
   <div class="w3-row-padding">
     <div class="w3-half">
-
+       <!-- Embedded visualisations -->
       <iframe src="https://editor.p5js.org/alizafq/full/IfXaQWwQO"></iframe>
+     <!-- <iframe height="633px" width="100%" src="https://www.ons.gov.uk/visualisations/dvc1134/covid-death-map/index.html"></iframe> -->
 
-     <!--  <iframe height="633px" width="100%" src="https://www.ons.gov.uk/visualisations/dvc1134/covid-death-map/index.html"></iframe> -->
-
+     <!-- 'Images' ... Could embed visualisations here and format to fit into grid-->
       <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive map"> <div class="w3-container" style="margin-top:80px" id="map"></div>
       <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="Line graph"> <div class="w3-container" style="margin-top:80px" id="linegraph"></div>
     </div>
+
     <div class="w3-half">
       <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Pie Chart"> <div class="w3-container" style="margin-top:80px" id="piechart"></div> 
       <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bar Chart"> <div class="w3-container" style="margin-top:80px" id="barchart"></div>
     </div>
   </div>
 
-  <!-- Modal for full size graphs on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+   <!-- Full size graphs once clicked-->
+   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
       <img id="img01" class="w3-image">
@@ -81,7 +74,7 @@ body {font-size:16px;}
     </div>
   </div>
   
-  <!-- Data sources - title -->
+  <!-- Data sources - title and overview text -->
   <div class="w3-container" id="designers" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Data sources</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
