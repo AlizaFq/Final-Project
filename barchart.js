@@ -16,7 +16,7 @@
     "Any other ethnic group = 2235" : 2235,
     "Not stated = 12322" : 12322,
     "No match = 1867": 1867,   
-}
+ }
       
       function setup() {
         createCanvas(5000, 10000);
