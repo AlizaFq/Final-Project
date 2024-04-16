@@ -9,7 +9,7 @@ function preload() {
 
 //run once when our index.html file is first loaded
 function setup() {
-  let cnv = createCanvas(500, 500); //width in pixels, height in pixels
+  let cnv = createCanvas(750, 750); //width in pixels, height in pixels
   noStroke();
   colorMode(RGB);
   //canvas.parent('canvasForHTML');
@@ -73,13 +73,13 @@ function piechart(x, y, w, h) {
 }
 
 function draw() {
-  background(0, 50, 20);
+  background(0, 100, 20);
   fill(255);
   textSize(20)
   text('Covid 19 related deaths by age',20, 50)
   
 
-  piechart(width/2, height/2, 300, 300);
+  piechart(width/2, height/2, 400, 400);
 }
 
 
