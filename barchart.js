@@ -1,4 +1,4 @@
-let data = {
+ let data = {
     "Irish (White) = 1215" : 1215, 
     "Any other White background = 4279" : 4279,  
     "White and Black Caribbean (Mixed) = 156" : 156, 
@@ -16,7 +16,7 @@ let data = {
     "Any other ethnic group = 2235" : 2235,
     "Not stated = 12322" : 12322,
     "No match = 1867": 1867,   
-      };
+}
       
       function setup() {
         createCanvas(5000, 10000);
