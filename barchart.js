@@ -17,10 +17,17 @@
     "Not stated = 12322" : 12322,
     "No match = 1867": 1867,   
  }
+
+ let img;
+ function preload() {
+  img = loadImage('assets/laDefense.jpg');
+}
       
       function setup() {
         createCanvas(5000, 10000);
         drawBarGraph();
+
+        image(img, 10, 10);
       }
       
       function drawBarGraph() {
