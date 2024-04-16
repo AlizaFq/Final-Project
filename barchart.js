@@ -1,6 +1,6 @@
  let data = {
     "Irish (White) = 1215" : 1215, 
-    "Any other White background = 4279" : 4279,  
+    "Any other White background = 1279" : 1279,  
     "White and Black Caribbean (Mixed) = 156" : 156, 
     "White and Black African (Mixed) = 70" : 70, 
     "White and Asian (Mixed) = 147" : 147,
@@ -39,8 +39,9 @@
           fill(barColor, 100, 100);
           rect(x, y, barWidth, barHeight);
           
-          fill(0);
+          
           textAlign(CENTER);
+          textSize(15);
           text(ethnicity, x + barWidth / 2, y - 10);
           
           index++;

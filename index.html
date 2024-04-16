@@ -33,10 +33,11 @@
   <script src="sketch.js"></script>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+<div id="sidebar">
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"></a>
 
-  <div class="w3-container"> <h3 class="w3-padding-64"><b>All<br>Visualisations</b></h3> </div>
+  <!--<div class="w3-container"> <h3 class="w3-padding-64"><b>All<br>Visualisations</b></h3> </div> -->
 
   <div class="w3-bar-block">
     <a href="#linegraph" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Line graph - Quantity of deaths directly resulted from Covid-19</a> 
@@ -44,16 +45,17 @@
      <a href="#piechart" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pie Chart - The ages of the deceased</a> 
      <a href="#map" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Interactive map - Overall deaths by area</a> 
   </div>
+</div>
 </nav>
 
 <!-- FORMAT main text alignment -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-  <!-- Headers -->
+  <!-- Title -->
   <div class="w3-container" style="margin-top:80px" id="map">
-    <h1 class="w3-jumbo"><b>Covid-related Deaths in the UK</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>At the height of the pandemic (March - December 2020)</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h1 class="w3-jumbo"><b>Covid-19 related Deaths in the UK</b></h1>
+    <h1 class="w3-xxxlarge w3-text-green"><b>At the height of the pandemic (March - December 2020)</b></h1>
+    <!--<hr style="width:900px;border:5px solid red" class="w3-round">-->
   </div>
   
    <!-- Grid (modal) -->
@@ -70,8 +72,7 @@
   
   <!-- Data sources - title and overview text -->
   <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Data sources</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Data sources</b></h1>
     <p> Data about public health in the UK is available on the UKHSA data dashboard. It contains a range of data, such as COVID instances, fatalities, medical care, and vaccinations in addition to tests. For each topic, they offered a different set of statistics. For example, the number of people needing hospital admissions has grown throughout the pandemic, yet weekly deaths have reduced substantially since the height of thr pandemic in 2020.</p>
     <p> By breaking down the number of COVID-19 deaths by age, sex, and ethnic group, we were able to obtain more accurate data. It also covers a range of age groups. For example, black men are 4.2 times more likely than white men and women to die from COVID-19, while black women are 4.3 times more likely. This comparison demonstrates how racial differences are used to gauge human behaviour rather than factors such as health status or the ability of the immune system to combat infection. </p>
     <p> UK death toll figures and the causes of the wide variations in the figures over time. For example, as of the end of July 2022, 180,000 individuals had died from COVID-19, accounting for approximately 1 in 8 of all deaths that occurred in England and Wales throughout the pandemic. Keeping track of the fatalities and injuries is crucial for us because it enables us to determine if the restrictions are effective. This is helpful to us since it shows how the average has changed or increased each month. </p>

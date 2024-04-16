@@ -6,12 +6,12 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(10000, 600);
+  createCanvas(10010, 600);
   drawLineGraph();
 }
 
 function drawLineGraph() {
-  background(255);
+  background(0, 94, 184);
   
   // Set up some variables for the graph
   let xPadding = 50;
@@ -35,20 +35,20 @@ function drawLineGraph() {
   
   // Draw the labels for the x and y axes
   textAlign(CENTER);
-  textSize(12);
-  fill(0);
-  text('Time', width / 2, height - 10);
-  text('Number of Deaths', 20, height / 2);
+  textSize(15);
+  fill(255);
+  text('Time', width / 20, height -10);
+  text('Number of Deaths', -70, 300, height / 2);
   
   // Draw the data points and connect them with lines
-  noFill();
+  fill(10, 124, 84);
   beginShape();
   for (let i = 0; i < data.getRowCount(); i++) {
     let x = map(i, 0, data.getRowCount() - 1, xPadding, width - xPadding);
     let y = map(data.getNum(i, 'deaths'), minDeaths, maxDeaths, height - yPadding, yPadding);
     vertex(x, y);
     // Draw circles at data points for better visibility
-    ellipse(x, y, 5, 5);
+    ellipse(x, y, 5, 9);
   }
   endShape();
 }

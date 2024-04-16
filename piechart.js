@@ -9,7 +9,7 @@ function preload() {
 
 //run once when our index.html file is first loaded
 function setup() {
-  let cnv = createCanvas(750, 750); //width in pixels, height in pixels
+  let cnv = createCanvas(900, 650); //width in pixels, height in pixels
   noStroke();
   colorMode(RGB);
   //canvas.parent('canvasForHTML');
@@ -56,12 +56,13 @@ function piechart(x, y, w, h) {
    rotate(currentAngle);
     //set colours
     fill(0, 94, 184);
-    stroke(241, 5, 95);
+    stroke(10, 124, 84);
+    strokeWeight(1);
     //draw the arc from 0 to sectorAngle
     arc(0, 0, w, h, 0, sectorAngle, PIE);
     
     //add text label for each sector
-    fill(241, 5, 95);
+    fill(255);
     noStroke();
     rotate(sectorAngle / 2);
     text(dataset.getString(row, 0), w / 2 + 10, 0);
@@ -73,10 +74,10 @@ function piechart(x, y, w, h) {
 }
 
 function draw() {
-  background(0, 100, 20);
+  background(23, 110, 34);
   fill(255);
   textSize(20)
-  text('Covid 19 related deaths by age',20, 50)
+  text('Covid-19 impacted deaths by age range',20, 50)
   
 
   piechart(width/2, height/2, 400, 400);
