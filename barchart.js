@@ -20,14 +20,14 @@
 
  let img;
  function preload() {
-  img = loadImage('assets/laDefense.jpg');
+  img = loadImage('1.jpg');
 }
       
       function setup() {
         createCanvas(5000, 10000);
         drawBarGraph();
 
-        image(img, 10, 10);
+        image(img, 10, 10, img.width/2, img.height/2);
       }
       
       function drawBarGraph() {
