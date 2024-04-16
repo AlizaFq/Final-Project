@@ -9,7 +9,7 @@ function preload() {
 
 //run once when our index.html file is first loaded
 function setup() {
-  let cnv = createCanvas(900, 650); //width in pixels, height in pixels
+  let cnv = createCanvas(1010, 650); //width in pixels, height in pixels
   noStroke();
   colorMode(RGB);
   //canvas.parent('canvasForHTML');
