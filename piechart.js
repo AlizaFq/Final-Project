@@ -56,7 +56,7 @@ function piechart(x, y, w, h) {
    rotate(currentAngle);
     //set colours
     fill(0, 94, 184);
-    stroke(10, 124, 84);
+    stroke(0);
     strokeWeight(1);
     //draw the arc from 0 to sectorAngle
     arc(0, 0, w, h, 0, sectorAngle, PIE);
@@ -76,10 +76,9 @@ function piechart(x, y, w, h) {
 function draw() {
   background(23, 110, 34);
   fill(255);
-  textSize(20)
+  textSize(25)
   text('Covid-19 impacted deaths by age range',20, 50)
   
-
   piechart(width/2, height/2, 400, 400);
 }
 
