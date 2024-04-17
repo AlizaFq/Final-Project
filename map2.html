@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MA1805 Coding for the Arts</title>
+    <!--THE BELOW LINE LOADS IN P5.JS. DO NOT EDIT!-->
+    <script src="https://cdn.jsdelivr.net/npm/p5"></script>
+    <!--LOAD THE mappa.js EXTENSION-->
+    <script src="./mappa.js" type="text/javascript"></script>
+  </head>
+  <body>
+        <!--IMPORTANT: THE BELOW <SCRIPT> TAG LINKS OUR CODE FILE INTO OUR PROJECT'S WEBPAGE.-->
+
+    <script>
+// Options for map
+const options = {
+  lat: 53.425222,  //initial latitude
+  lng: -1.563167,  //initial longitude
+  zoom: 6, //initial zoom level
+  style: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png' //where we are getting our map tiles from
+}
+const mappa = new Mappa('Leaflet');
+let myMap;
+let canvas;
+let data;
+
+function preload() {
+  // Load the CSV data
+  data = loadTable('data graph.csv', 'csv', 'header');
+}
+  
+function setup() {
+  canvas = createCanvas(990, 610);
+  myMap = mappa.tileMap(options);
+  myMap.overlay(canvas); // overlay the canvas on the map
+  console.log(data.getRowCount());
+  // Filtered data to display
+  let month = findGet('month', 'March', 'April', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+  let from = findGet('from', 0);
+  let to = findGet('to', 7000); 
+  console.log('Display:'+month, 'from:'+from, 'to:'+to)
+}
+
+function draw(){
+  clear(); //clear the pixel buffer 
+  //testPoint(); // Draw a dot at Royal Holloway
+  plotData();
+}
+
+//function testPoint(){
+  //let pos = myMap.latLngToPixel(51.425222, -0.563167);
+  //fill(0);
+  //ellipse(pos.x, pos.y, 5, 5); //draw an ellipse at the desired coordinate
+  //textSize(20);
+  //text('Royal Holloway!', pos.x, pos.y-5) //a label 
+//}
+
+function plotData() {
+  // Display a subset of data because the browser can't cope with 7k+ 
+  //   Requires a URL like this: map2.html?from=100&to=100&month=March
+  let month = findGet('month', 'March', 'April', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+  let from = findGet('from', 0);
+  let to = findGet('to', 7000); 
+  // Loop through the data and display
+  for (let i=from; i<to; i++) {
+    let latitude = data.getNum(i, 'Latitude');
+    let longitude = data.getNum(i, 'Longitude');
+    let deaths = data.getNum(i, month); // Deaths are listed by month... See dataset
+    let pos = myMap.latLngToPixel(latitude, longitude);
+    textSize(20);
+    fill(0)
+    ellipse(pos.x, pos.y, 5, 5); 
+    // Image could be insert here
+    text(deaths, pos.x, pos.y-5) //a label 
+  }
+}
+
+function findGet(parameterName, theDefault) {
+    let result = null,
+        tmp = [];
+    let items = location.search.substr(1).split("&");
+    for (let index = 0; index < items.length; index++) {
+        tmp = items[index].split("=");
+        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+    }
+    if(result===null){
+      return theDefault; 
+    }else{
+      return result;
+    }
+}
+
+
+
+    </script>
+
+  </body>
+</html>
