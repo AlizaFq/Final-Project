@@ -1,3 +1,12 @@
+ /* * * * * * * * * * * * * * * * * * D A T A * * * * * * * * * * * * * * * * * * * * * * * *
+
+ THE DATA IN THIS SKETCH COMES
+ FROM THE UN'S HUMANITARIAN
+ DATA EXCHANGE. SEE THE DATA:
+ https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014/resource/10ac8776-5141-494b-b3cd-bf7764b2f964
+
+* * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ 
  let data = {
     "Irish (White) = 1215" : 1215, 
     "Any other White background = 1279" : 1279,  

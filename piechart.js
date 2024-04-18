@@ -1,3 +1,12 @@
+/* * * * * * * * * * * * * * * * * * D A T A * * * * * * * * * * * * * * * * * * * * * * * *
+
+ THE DATA IN THIS SKETCH COMES
+ FROM THE UN'S HUMANITARIAN
+ DATA EXCHANGE. SEE THE DATA:
+ https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014/resource/10ac8776-5141-494b-b3cd-bf7764b2f964
+
+* * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 let dataset1 = []; //master array to load the dataset file in rows
 
 let total = 0;
