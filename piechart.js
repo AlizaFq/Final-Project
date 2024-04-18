@@ -83,7 +83,7 @@ function piechart(x, y, w, h) {
 }
 
 function draw() {
-  background(23, 110, 34);
+  background(0, 112, 60);
   fill(255);
   textSize(25)
   text('Covid-19 impacted deaths by age range',20, 50)

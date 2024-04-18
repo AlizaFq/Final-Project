@@ -1,0 +1,24 @@
+#image4{
+    position: fixed;
+    top:0px;
+    left:750px;
+    opacity: 0.4;
+  }
+  #image6{
+    position: fixed;
+    top:10px;
+    left:-20px;
+    opacity: 0.25;
+  }
+  #image7{
+    position: fixed;
+    top:200px;
+    left:300px;
+    opacity: 0.2;
+  }
+  #image8{
+    position: fixed;
+    top:500px;
+    left:0px;
+    opacity: 0.4;
+  }

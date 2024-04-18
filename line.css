@@ -1,5 +1,13 @@
 #image1{
     position: fixed;
-    top:20px;
-    left:100px;
+    top:0px;
+    left:557px;
+    opacity: 0.8;
+  }
+
+  #image2{
+    position: fixed;
+    top:0px;
+    left:300px;
+    opacity: 0.5;
   }
