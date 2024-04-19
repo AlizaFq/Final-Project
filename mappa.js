@@ -1,10 +1,7 @@
 /* * * * * * * * * * * * * * * * * * D A T A * * * * * * * * * * * * * * * * * * * * * * * *
-
- THE DATA IN THIS SKETCH COMES
- FROM THE UN'S HUMANITARIAN
- DATA EXCHANGE. SEE THE DATA:
- https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014/resource/10ac8776-5141-494b-b3cd-bf7764b2f964
-
+ THE DATA IN THIS SKETCH IS BASED ON A SIMILAR VISUALISATION 
+ SEE THE DATA AND MAP:
+ https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/causesofdeath/articles/deathsinvolvingcovid19interactivemap/2020-06-12
 * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 (function webpackUniversalModuleDefinition(root, factory) {

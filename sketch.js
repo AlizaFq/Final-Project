@@ -1,25 +1,12 @@
-/* * * * * * * * * * * * * * * * * * D A T A * * * * * * * * * * * * * * * * * * * * * * * *
-
- THE DATA IN THIS SKETCH COMES
- FROM THE UN'S HUMANITARIAN
- DATA EXCHANGE. SEE THE DATA:
- https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014/resource/10ac8776-5141-494b-b3cd-bf7764b2f964
-
-* * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-// Options for map
 const options = {
-  lat: 0, //initial latitude
-  lng: 0, //initial longitude
-  zoom: 3, //initial zoom level
-  style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png" //where we are getting our map tiles from
+  lat: 0, 
+  lng: 0, 
+  zoom: 3, 
+  style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png" 
 };
 
-// Create an instance of Leaflet
 const mappa = new Mappa("Leaflet");
-//we use myMap to refer to the world map displayed on our canvas
 let myMap;
-//we need to treat our canvas a bit differently than usual when working with maps
 let canvas;
 
 let dataset;
@@ -31,26 +18,15 @@ function preload() {
 }
 
 function setup() {
-  //we create our canvas element, and store it in the variable 'canvas'
   canvas = createCanvas(1280, 720);
-
-  // Create a tile map and overlay the canvas on top.
   myMap = mappa.tileMap(options);
-
-  /*Now we apply our canvas element as an overlay on the map
-    this allows us to draw and interact with the underlying map, 
-    and keeps the canvas and the map in alignment at all times!
-  */
   myMap.overlay(canvas);
-
   noStroke();
-
   minMag = min(dataset.getColumn("Magnitude"));
   maxMag = max(dataset.getColumn("Magnitude"));
 }
 
 function draw() {
-  //clear the pixel buffer - this works like 'background()', refreshing the canvas every frame
   clear();
 
   let hoverRow = -1;

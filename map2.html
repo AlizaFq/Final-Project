@@ -13,14 +13,13 @@
   </head>
   <body>
         <!--IMPORTANT: THE BELOW <SCRIPT> TAG LINKS OUR CODE FILE INTO OUR PROJECT'S WEBPAGE.-->
-
     <script>
 // Options for map
 const options = {
-  lat: 53.425222,  //initial latitude
-  lng: -1.563167,  //initial longitude
-  zoom: 6, //initial zoom level
-  style: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png' //where we are getting our map tiles from
+  lat: 53.425222,  
+  lng: -1.563167,  
+  zoom: 6, 
+  style: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png' 
 }
 const mappa = new Mappa('Leaflet');
 let myMap;
@@ -28,7 +27,6 @@ let canvas;
 let data;
 
 function preload() {
-  // Load the CSV data
   data = loadTable('data graph.csv', 'csv', 'header');
 }
   
@@ -46,21 +44,10 @@ function setup() {
 
 function draw(){
   clear(); //clear the pixel buffer 
-  //testPoint(); // Draw a dot at Royal Holloway
   plotData();
 }
 
-//function testPoint(){
-  //let pos = myMap.latLngToPixel(51.425222, -0.563167);
-  //fill(0);
-  //ellipse(pos.x, pos.y, 5, 5); //draw an ellipse at the desired coordinate
-  //textSize(20);
-  //text('Royal Holloway!', pos.x, pos.y-5) //a label 
-//}
-
 function plotData() {
-  // Display a subset of data because the browser can't cope with 7k+ 
-  //   Requires a URL like this: map2.html?from=100&to=100&month=March
   let month = findGet('month', 'March', 'April', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
   let from = findGet('from', 0);
   let to = findGet('to', 7000); 
@@ -68,13 +55,12 @@ function plotData() {
   for (let i=from; i<to; i++) {
     let latitude = data.getNum(i, 'Latitude');
     let longitude = data.getNum(i, 'Longitude');
-    let deaths = data.getNum(i, month); // Deaths are listed by month... See dataset
+    let deaths = data.getNum(i, month); 
     let pos = myMap.latLngToPixel(latitude, longitude);
     textSize(20);
     fill(0)
     ellipse(pos.x, pos.y, 5, 5); 
-    // Image could be insert here
-    text(deaths, pos.x, pos.y-5) //a label 
+    text(deaths, pos.x, pos.y-5) 
   }
 }
 

@@ -1,10 +1,8 @@
  /* * * * * * * * * * * * * * * * * * D A T A * * * * * * * * * * * * * * * * * * * * * * * *
-
  THE DATA IN THIS SKETCH COMES
- FROM THE UN'S HUMANITARIAN
- DATA EXCHANGE. SEE THE DATA:
- https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014/resource/10ac8776-5141-494b-b3cd-bf7764b2f964
-
+ FROM THE NHS
+ SEE THE DATA:
+https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-deaths/
 * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * */
  
  let data = {

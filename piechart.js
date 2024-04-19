@@ -1,32 +1,23 @@
 /* * * * * * * * * * * * * * * * * * D A T A * * * * * * * * * * * * * * * * * * * * * * * *
-
  THE DATA IN THIS SKETCH COMES
- FROM THE UN'S HUMANITARIAN
- DATA EXCHANGE. SEE THE DATA:
- https://data.humdata.org/dataset/catalog-of-earthquakes1970-2014/resource/10ac8776-5141-494b-b3cd-bf7764b2f964
-
+ FROM THE NHS
+ SEE THE DATA:
+ https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-deaths/
 * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-let dataset1 = []; //master array to load the dataset file in rows
+let dataset1 = []; 
 
 let total = 0;
 let scaling = 0;
 
 function preload() {
-  dataset = loadTable("pie.csv", "header"); //load the data file as a table
+  dataset = loadTable("pie.csv", "header"); 
 }
 
-//run once when our index.html file is first loaded
 function setup() {
-  let cnv = createCanvas(1010, 650); //width in pixels, height in pixels
+  let cnv = createCanvas(1010, 650);
   noStroke();
   colorMode(RGB);
-  //canvas.parent('canvasForHTML');
-  //cnv.position(400, 300, 'fixed');
-
-  //NOTE!! pie charts represent values as a fraction of a total
-  //each 'sector' of the chart must be displayed as a proportion of this total
-  //we must get this 'total' value first so we know how to scale the size of each sector in our visualisation
   
   //loop through each row
   for (let row = 0; row < dataset.getRowCount(); row++) {
@@ -49,21 +40,14 @@ function piechart(x, y, w, h) {
   //loop through each row in the dataset
  for (let row = 0; row < dataset.getRowCount(); row++) {
     //calculate the angle for this sector
-    
-    /*multiple by scaling to get current value as a percentage (100), 
-    then multiple by 3.6 to get it as a proportion 
-    of a circle (100 * 3.6 = 360 degrees)
-     */
+
     let sectorAngle = radians(dataset.getNum(row, 1) * scaling * 3.6);
 
-    //we will use translate and rotate below
     //use push() and pop() to help control position of each arc and text
     push();
-    //move to correct position
     translate(x, y);
     //rotate to the current starting angle
    rotate(currentAngle);
-    //set colours
     fill(0, 94, 184);
     stroke(0);
     strokeWeight(1);
